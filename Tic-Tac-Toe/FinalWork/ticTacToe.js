@@ -4,7 +4,7 @@ let arr = [];
 for(let i=0;i<9;i++){
     arr.push(3);
 }
-let cnt=0;
+let cnt=0,flag=0;
 
 
 //Initial Function
@@ -21,6 +21,7 @@ let init = ()=>{
     element.style.border="";
     
     cnt=0;
+    flag=0;
 }
 
 //Determine which type of image will be used
@@ -44,8 +45,9 @@ let setImage = (id) =>{
      if(checkWinner(cnt%2)){
          console.log("Winner "+id);
          winningFunction(cnt%2);
+        flag=1;
      }
-     if(arr.indexOf(3)===-1){
+     if(arr.indexOf(3)===-1 && flag===0){
          drawFunction();
      }
      console.log(arr);
@@ -71,10 +73,14 @@ let printItems = (text,element,id)=>{
 
 //Winning function 
 let winningFunction=(id)=>{
+    for(let i=0;i<9;i++){
+        arr[i]=2;
+    }
     let player=(id===0)?2:1;
     let element=document.getElementById("id1");
     let text=`Winner is Player ${player}`;
-    printItems(text,element,true);   
+    printItems(text,element,true);  
+     
 }
 
 
