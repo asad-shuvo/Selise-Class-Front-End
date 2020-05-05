@@ -3,7 +3,7 @@
     margin: auto;
     width: 20%;
     border: 3px solid green;
-    padding: 20px;
+    padding: 10px;
       
   }
 
@@ -16,7 +16,7 @@ td{
     width: 25%;
     margin:  auto;
     padding: 20px;
-    padding: 50px;
+   
     /* height: 300px; */
     /* //width: 300px; */
     
@@ -28,7 +28,17 @@ td{
     /* border: solid; */
 }
 
+#divclass2{
+  width: 25%;
+  margin:  auto;
+  padding: 20px;
+ 
+}
+
 #startId{
+  /* margin: auto;
+    position: relative; */
+   
     font-size: 20px;
     color: cornflowerblue;
 }

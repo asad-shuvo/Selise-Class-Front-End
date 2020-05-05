@@ -1,4 +1,3 @@
-
 //Inially Array Declare
 let arr = [];
 for(let i=0;i<9;i++){
@@ -65,9 +64,9 @@ let printItems = (text,element,id)=>{
     }
     element.style.border="solid";
     element.style.fontSize="20px";
-    element.style.width="30%";
+    element.style.width="15%";
     element.style.margin="auto";
-    element.style.padding="20px";
+    element.style.padding="10px";
 }
 
 
