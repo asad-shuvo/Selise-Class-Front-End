@@ -17,9 +17,10 @@
                 <th><img style="padding-left: 25ch;" id="img1" src="bird.png" alt="" height="20px"></th>
                 <th id="th1"><input class="input1"  type="text" value="" placeholder="Search Twitter"></th>
                     <!-- <th><input style="width: 300px; height: 30px;" type="text" value="" placeholder="Search Twitter"></th> -->
-                 <th style="padding-left: 20ch;"> <button id="btn3">Log in</button></th>
-                 <th> <button id="btn4">Sign up</button></th>
-    
+                 <th style="padding-left: 20ch;"> <button id="btn3"><a href="loginPage.html">Log in</a></button></th>
+                 <th> <button onclick="document.getElementById('modal-wrapper').style.display='block'" id="btn4">Sign up</button></th>
+                 <!-- <button " style="width:200px; margin-top:200px; margin-left:160px;"> -->
+                    <!-- Open Popup</button> -->
                  <th> <img id="img2" style="color: aqua;"  src="dot.png" alt="" height="40px">
             </tr>
         </table>   
@@ -54,7 +55,7 @@
                 </p>
                 <div style="position: relative;">
                     <div class="div8">
-                <button  id="btn5" >Change location</button>
+                <button  id="btn5" ><a style="color: whitesmoke;" href="loginPage.html">Change location</a></button>
                     </div>
             </div>
             </div>
@@ -105,5 +106,67 @@
         </div>
        
       </div>
+
+      <!-- /Pop up/ -->
+      <div id="modal-wrapper" class="modal">
+  
+        <form class="modal-content animate" action="/action_page.php">
+              
+          
+      
+          <div class="div14">
+              <div class=" div12 " id="d1" style="padding-left: 250px;">
+                 <table>
+                     <tr>
+                         <td><img src="bird.png" alt="bird" height="25px"></td>
+                         <td style="padding-left: 200px;"><button id="btn6">Next</button></td>
+                     </tr>
+                 </table> 
+              </div>
+      
+              <div class="  div11">
+                  <h2>Create your account</h2>
+              </div>
+      
+              <div class=" div9">
+                  <p id="p_4">Name</p>
+                  <input id="input11" type="text" style="border-left:3px;">
+              </div>
+              <div class="div10" >
+                  <p id="p_5">Phone</p>
+                  <input id="input12" placeholder="" type="text" />    
+              </div>
+              <div class=" div13">
+                  <p style="color:#00acee;" id="pid5">Use email instead</p>
+              </div>
+          </div>
+      
+          
+        </form>
+        
+      </div>
+      <script>
+        let el=document.getElementById('pid5');
+        el.addEventListener('click',function(){
+            let val=document.getElementById('pid5').value;
+            console.log(val);
+            
+        });
+    // If user clicks anywhere outside of the modal, Modal will close
+    
+            document.getElementById('input11').addEventListener('click',function(){
+                document.getElementById('p_4').style.color="#00acee";
+            });
+            document.getElementById('input12').addEventListener('click',function(){
+                document.getElementById('p_5').style.color="#00acee";
+            });
+       
+    var modal = document.getElementById('modal-wrapper');
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+    </script>
 </body>
 </html>

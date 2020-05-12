@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="loginPage.css">
+</head>
+<body>
+    <div class="divmain" >
+    <div class="div4">
+        <img src="bird.png" alt="bird" height="35px">
+    </div>
+    
+    <div class="div5">
+        <h2 style="font-weight: 2000; font-family: Helvetica Neue;">Log in to Twitter</h2>
+    </div>
+        <div class="div1">
+            <p id="p_1">Phone, email, or username</p>
+            <input id="input1" type="text" style="border-left:3px;">
+        </div>
+        <div class="div2" >
+            <p id="p_2">password</p>
+            <input id="input2" placeholder="" type="text" />    
+        </div>
+
+        <div class="div3">
+            <button id="btn3" style="color: white; font-weight: bolder;">Log in</button></th>
+        </div>
+        <div class="div6">
+            <a href="#" style="padding-right: 5px;">Forget password?</a>
+            <a href="#">Sign up for Twitter</a>
+        </div>
+    </div>
+    <script>
+        document.getElementById('input1').addEventListener('click',function(){
+            document.getElementById('p_1').style.color="#00acee";
+        });
+        document.getElementById('input2').addEventListener('click',function(){
+            document.getElementById('p_2').style.color="#00acee";
+        });
+    </script>
+</body>
+</html>
