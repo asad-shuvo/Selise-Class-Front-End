@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="row">
+
+        <div class="column left">
+            <div class="Home">
+                <img class="image" src="img/bird.png" alt="" srcset="">
+            </div>
+            <div class="Home">
+               <h2>Home</h2>
+            </div> 
+        </div>
+
+        <div class="column middle">
+            <div class="header">
+               <p class="home ">Home</p>
+            </div>
+            <div class="post">
+            <textarea class="textArea" name="" id="" placeholder="What's happening?"></textarea>
+            </div>
+            <div class="tweet">
+                <input type="submit" class="tweetBtn btn" value="Tweet">
+            </div>
+            <div class="showField">
+            <table>
+                
+                <tr class="display"></tr>
+            
+                <tbody class="post-list"></tbody>
+            </div>
+            </table>
+        </div>
+        </div>
+        
+       
+        <div class="column right">
+            <div class="search">
+                <table class="searchTable"">
+                    <tr>
+                        <th>
+                            <img  class="imageSearch" src="img/search.jpg" alt="" height="25px">   
+                        </th>
+                        <th>
+                            <input class="searchInput "  type="text" value="" placeholder="Search Twitter">
+                        </th>
+                    </tr>
+                </table>
+              
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-wrapper" class="modal">
+  
+        <form class="modal-content animate" action="">
+              <div class="actualPost">
+                  <h2 class="showPost">Create your account</h2>
+              </div>   
+              
+              <div class="commentReply">
+                <input class="commentReplyInput"  placeholder="Tweet your reply" type="text"">
+            </div>
+            <div class="reply">
+                <p class="replyBtn btn">Reply</p>
+                <!-- <input type="submit" class="replyBtn btn" value="Reply"> -->
+            </div>
+          <div>
+              <table>
+       <tr></tr>
+       <tbody class="comment-list">
+
+       </tbody>           
+              </table>
+          </div>
+        </form>
+        
+      </div>
+
+    <script src="JS/displayWork.js"></script>
+    <script src="JS/textAreaWork.js"></script>
+</body>
+</html>
