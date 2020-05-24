@@ -39,7 +39,7 @@ const L= document.createElement('div');
 
 
 let tble =document.createElement('tr');
-
+tble.classList="tableClass";
 
 
 // let cnt=0, cntC=0;
