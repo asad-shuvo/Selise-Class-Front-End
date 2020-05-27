@@ -200,6 +200,7 @@ div{
   }
    .diplsyComment{
        overflow:hidden;
+       width: 100vh;
        border-bottom: 1px solid #d3d7de; 
       /* background-color: #f1f1f1; */
       padding-top: 10px;
