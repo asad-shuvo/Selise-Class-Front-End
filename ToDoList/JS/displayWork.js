@@ -36,6 +36,8 @@ class UI {
 
   //Update the sum
   static totalSumUpdate(size) {
+    console.log(size);
+    
     let sum = document.querySelector('.total-sum').innerHTML;
     let numeric = sum.split(" ");
     console.log(numeric[1]);
@@ -67,26 +69,43 @@ class UI {
       return x < y ? -1 : x > y ? 1 : 0;
     });
 
-    
-
     //calling t0 calculate total sum
-    UI.totalSumUpdate(posts.length);
+let cnt=0;
+posts.forEach((el)=>{
+  if(el.complete==true)cnt++;
+});
+
+
+let nonComplete = posts.length-cnt;
+let sizePost;
+if(type==1){
+  sizePost = cnt;
+}
+else if(type==2){
+  sizePost = nonComplete;
+}
+else if(type==0){
+  sizePost = posts.length;
+}
+
+    UI.totalSumUpdate(sizePost);
 
     for (let i = 0; i < posts.length; i++) {
       if (type == 1) {
         if (posts[i].complete == true) {
 
-          UI.addPostToList(posts[i])
+          UI.addPostToList(posts[i]);
+
         }
       }
       if (type == 2) {
         if (posts[i].complete == false) {
 
-          UI.addPostToList(posts[i])
+          UI.addPostToList(posts[i]);
         }
       }
       if (type == 0) {
-        UI.addPostToList(posts[i])
+        UI.addPostToList(posts[i]);
       }
     }
 
